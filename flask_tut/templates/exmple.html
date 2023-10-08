@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Webpage</title>
+    <style>
+        /* ... (your existing styles) ... */
+        
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Vertically center the buttons */
+        }
+        
+        .registration-button {
+            margin-top: 0; /* Remove the margin-top */
+        }
+    </style>
+</head>
+<body>
+    <!-- ... (your existing content) ... -->
+    
+    <div class="container">
+        <div class="login-form">
+            <h1>Login</h1>
+            <form id="loginForm" action="/login" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+                
+                <!-- Wrap the login button and registration button in a container -->
+                <div class="button-container">
+                    <button type="submit" class="button">Login</button>
+                    <div class="registration-button">
+                        <a href="{{url_for('register')}}" class="button">Register</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

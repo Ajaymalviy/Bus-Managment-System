@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Details</title>
+    <style>
+        body {
+            background-color: rgb(247, 190, 122);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #5a2b2b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        thead {
+            background-color: #333;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:hover {
+            background-color: #a9ee5a;
+        }
+        button{
+            padding: 3%;
+            margin: 4%;
+            background-color: rgb(218, 122, 26);
+            border-radius: 5px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Bus Details</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Bus ID</th>
+                <th>Driver ID</th>
+                <th>Conductor ID</th>
+                <th>Bus Number</th>
+                <th>Bus Model</th>
+                <th>Seating Capacity</th>
+                <th>Route</th>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+                <th>Action</th>
+                <!-- Add more table headers for other attributes if needed -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for bus in bus_data %}
+                <tr>
+                    <td>{{ bus.bus_id }}</td>
+                    <td>{{ bus.driver_id }}</td>
+                    <td>{{ bus.conductor_id }}</td>
+                    <td>{{ bus.bus_number }}</td>
+                    <td>{{ bus.bus_model }}</td>
+                    <td>{{ bus.seating_capacity }}</td>
+                    <td>{{ bus.route }}</td>
+                    <td>{{ bus.departure_time }}</td>
+                    <td>{{ bus.arrival_time }}</td>
+                    <td>
+                        <button onclick="deleteBus({{ bus.bus_id }})">Delete</button>
+
+                        <button onclick="editBus({{ bus.bus_id }})">Edit</button>
+                    </td>
+                    
+                    <!-- Add more table cells for other attributes if needed -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+    <script>
+        function editBus(busid) {
+            // Replace with your edit logic, e.g., open a modal for editing
+            alert("Edit bus with ID: " + busid);
+        }
+
+        function deleteBus(busid) {
+            // Replace with your delete logic, e.g., show a confirmation dialog
+            if (confirm("Delete bus with ID: " + busid + "?")) {
+                // Perform the delete action here
+                alert("Bus deleted successfully.");
+            }
+        }
+    </script>
+</body>
+</html>

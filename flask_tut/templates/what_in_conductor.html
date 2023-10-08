@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Grid</title>
+    <style>
+        body {
+            background-image:url('/static/image/mitchell-johnson-nd5oU1Duhf0-unsplash.jpg');
+;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .content {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-left: 15px ;
+            margin-top:15px ;
+            text-align: center;
+        }
+
+        .button {
+            background-color: #d141ca;
+            color: #ffffff;
+            border: 2px solid black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #606263;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>You Can Change Bus Detail</h1>
+        <p>Click And Make Change</p>
+    </div>
+
+    <div class="button-container">
+        <a class="button" href="{{url_for('bus_details')}}">ADD</a>
+        <a class="button" href="{{url_for('platform_details')}}">DELETE</a>
+        <a class="button" href="{{url_for('ticket_routes')}}">UPDATE</a>
+        <a class="button" href="{{url_for('index')}}">READ</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Details</title>
+    <style>
+        body {
+            background-color: rgb(248, 207, 157);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #5a2b2b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        thead {
+            background-color: #4e3333;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:hover {
+            background-color: #ddd;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Platform Details</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Platform ID</th>
+                <th>Platform Number</th>
+                <th>Location</th>
+                <!-- Add more table headers for other attributes if needed -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for platform in platform_data %}
+                <tr>
+                    <td>{{ platform.platform_id }}</td>
+                    <td>{{ platform.platform_number }}</td>
+                    <td>{{ platform.location }}</td>
+                    <!-- Add more table cells for other attributes if needed -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

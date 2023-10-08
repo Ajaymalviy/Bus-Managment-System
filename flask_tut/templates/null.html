@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    {% if result %}
+    <h2>Bus Details:</h2>
+    <p>bus_id: {{ result[0][0] }}</p> <!-- Accessing the first column of the first row of the result -->
+    <!-- Add similar lines for other fields if needed -->
+    {% endif %}
+
+    {% if result2 %}
+    <h2>Driver Details:</h2>
+    <p>driver_id: {{ result2[0][0] }}</p> <!-- Accessing the first column of the first row of the result2 -->
+    <!-- Add similar lines for other fields if needed -->
+    {% endif %}
+</body>
+</html>

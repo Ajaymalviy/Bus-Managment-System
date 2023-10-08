@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to AICTSL Bus</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('/home/ajay/Downloads/hobi-industri-C-zgN_LEKb8-unsplash (copy).jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Define different colors for each button */
+        .button.blue {
+            background-color: #007BFF;
+        }
+
+        .button.green {
+            background-color: #28A745;
+        }
+
+        .button.orange {
+            background-color: #FFA500;
+        }
+
+        .button.red {
+            background-color: #DC3545;
+        }
+
+        .button.purple {
+            background-color: #6F42C1;
+        }
+
+        /* CSS styles for the login and registration forms */
+        .login-registration-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .login-form,
+        .registration-form {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .login-form h1,
+        .registration-form h1 {
+            text-align: center;
+        }
+
+        .login-form form,
+        .registration-form form {
+            text-align: center;
+        }
+
+        .login-form button,
+        .registration-form button {
+            margin-top: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-form button:hover,
+        .registration-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Welcome to AICTSL Bus - See Details on Click
+    </div>
+    <div class="container">
+        <div class="button-container">
+            <a href="link1" class="button blue">Bus-Detail</a>
+            <a href="link2" class="button green">Driver-Detail</a>
+            <a href="link3" class="button orange">Conductor-Detail</a>
+            <a href="link4" class="button red">Platform-Detail</a>
+            <a href="link5" class="button purple">Routes</a>
+        </div>
+        <div class="login-registration-container">
+            <div class="login-form">
+                <h1>Login</h1>
+                <form id="loginForm" action="/" method="POST">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br><br>
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required><br><br>
+                    
+                    <button type="submit">Login</button>
+                </form>
+                <a href="register">Registration</a>
+            </div>
+
+            <div class="registration-form">
+                <h1>Registration</h1>
+                <form id="registrationForm" action="register" method="POST">
+                    <label for="newUsername">New Username:</label>
+                    <input type="text" id="newUsername" name="newUsername" required><br><br>
+                    
+                    <label for="newPassword">New Password:</label>
+                    <input type="password" id="newPassword" name="newPassword" required><br><br>
+                    
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
