@@ -1,6 +1,7 @@
 # appofproject.py
 from flask import Flask, render_template, request
-import mysql.connector #for connect with mysql
+import mysql.connector
+#for connect with mysql
 #from config_last import DATABASE_CONFIG,can also be done with the another file where our data are feed
 
 db_config = {
